@@ -1,7 +1,7 @@
 "use strict"
 
 import express = require('express');
-import mongoose from 'mongoose';
+import mongoose = require('mongoose');
 
 const app = express();
 app.use(express.static(__dirname));
@@ -21,7 +21,7 @@ app.get('/', function(request: express.Request, response: express.Response) {
 */
 
 async function initServer() {
-  const MONGODB_NAME = 'cs194';
+  const MONGODB_NAME = 'boilerplate';
   await mongoose.connect('mongodb://127.0.0.1:27017/' + MONGODB_NAME);
   console.log('Mongoose successfully connected to MongoDB.');
 
