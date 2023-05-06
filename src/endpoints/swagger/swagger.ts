@@ -10,7 +10,7 @@ const options = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "CS 194 Express API with Swagger",
+      title: "MERN Boilerplate Express API with Swagger",
       version: "1.0",
     }
   },
