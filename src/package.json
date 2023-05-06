@@ -1,7 +1,7 @@
 {
-  "name": "photowars",
+  "name": "MERN Boilerplate",
   "version": "1.0.0",
-  "description": "CS 194 Spring 2023, Team 15 Class Project",
+  "description": "MERN Boilerplate Code",
   "main": "server.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
