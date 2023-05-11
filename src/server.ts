@@ -2,23 +2,16 @@
 
 import express = require('express');
 import mongoose = require('mongoose');
+import path = require('path');
 
 const app = express();
-app.use(express.static(__dirname));
-app.use(express.json());
+app.use(express.static(path.join(__dirname, 'dist')));
 
 import { swaggerRouter } from './endpoints/swagger/swagger';
 app.use('/swagger', swaggerRouter );
 
 import { testRouter } from './endpoints/test/test';
 app.use('/test', testRouter);
-
-/*
- * Not called on because index.html is served instead, as expected.
-app.get('/', function(request: express.Request, response: express.Response) {
-  response.send('Simple web server of files from ' + __dirname);
-});
-*/
 
 async function initServer() {
   const MONGODB_NAME = 'boilerplate';

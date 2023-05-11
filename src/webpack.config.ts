@@ -54,6 +54,10 @@ module.exports = {
     },
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      filename: './index.html'
+    }),
     new NodemonPlugin({
       script: './server.ts',
       watch: ['./server.ts', './endpoints/**/*.ts'], 
