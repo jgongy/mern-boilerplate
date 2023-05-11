@@ -18,11 +18,11 @@ app.use('/test', testRouter);
 async function initServer() {
   const MONGODB_URI = process.env.MONGODB_URI
                       || 'mongodb://127.0.0.1:27017/'
-                         + constants._mongoDatabaseName);
+                         + constants._mongoDatabaseName;
   console.log('Mongoose successfully connected to MongoDB.');
 
   const PORT = process.env.PORT || constants._portNum;
-  app.listen(PORT_NUM, function() {
+  app.listen(PORT, function() {
     console.log('Listening at http://127.0.0.1:' + PORT
                 + ' exporting the directory ' + __dirname + '/path.');
   });
