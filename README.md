@@ -18,9 +18,9 @@ are just scripts that Heroku will run when the app is deployed to install
 dependencies. We need a buildpack for NodeJS, TypeScript, and a third buildpack
 specify the directory location of our `package.json` file.
 
-        heroku buildpacks:set nodejs
-        heroku buildpacks:set https://buildpack-registry.s3.amazonaws.com/buildpacks/zidizei/typescript.tgz
-        heroku buildpacks:set https://github.com/timanovsky/subdir-heroku-buildpack
+        heroku buildpacks:add nodejs
+        heroku buildpacks:add https://buildpack-registry.s3.amazonaws.com/buildpacks/zidizei/typescript.tgz
+        heroku buildpacks:add https://github.com/timanovsky/subdir-heroku-buildpack
 
 We also need to set environment variables in Heroku that the application
 expects to exist. One of these variables is the `MONGODB_URI`, which you can
