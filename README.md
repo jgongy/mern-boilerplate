@@ -1,9 +1,10 @@
 # Description
 Boilerplate code for a MERN stack application.
 
-# How to Upload to Heroku (prerequisite: install Heroku CLI)
-The following steps allow you to run this repository on Heroku. As a prerequisite,
-you need to 
+# How to Run Application on Heroku
+The following steps allow you to run this repository on Heroku. As a
+prerequisite, you need to have Heroku CLI installed. Alternatively, you
+should be able to follow these steps on the Heroku website.
 
 First, you need to authenticate to Heroku.
 
@@ -24,7 +25,7 @@ specify the directory location of our `package.json` file.
 
 We also need to set environment variables in Heroku that the application
 expects to exist. One of these variables is the `MONGODB_URI`, which you can
-get by following the steps in this [guide](https://www.mongodb.com/developer/products/atlas/use-atlas-on-heroku/)
+get by following the steps in this [guide](https://www.mongodb.com/developer/products/atlas/use-atlas-on-heroku/).
 
     heroku config:set PROJECT_PATH=src
     heroku config:set MONGODB_URI=<MongoDB Atlas URI>
