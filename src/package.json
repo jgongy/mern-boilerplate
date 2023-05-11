@@ -6,9 +6,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint . --ext .ts,.tsx",
-    "build": "webpack --config webpack.config.ts",
-    "start": "nodemon server.ts",
-    "watch": "webpack serve --config webpack.config.ts"
+    "build": "rimraf dist && tsc && webpack --config dist/webpack.config.js",
+    "build:dev": "webpack --config webpack.config.ts",
+    "start": "node dist/server.js",
+    "start:dev": "nodemon server.ts",
+    "watch": "webpack serve --config webpack.config.ts",
+    "postinstall": "npm run build"
   },
   "author": "",
   "license": "ISC",
