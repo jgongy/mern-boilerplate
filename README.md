@@ -18,7 +18,7 @@ are just scripts that Heroku will run when the app is deployed to install
 dependencies. We need a buildpack for NodeJS, TypeScript, and a third buildpack
 specify the directory location of our `package.json` file.
 
-    heroku buildpacks:add nodejs
+    heroku buildpacks:add heroku/nodejs
     heroku buildpacks:add https://buildpack-registry.s3.amazonaws.com/buildpacks/zidizei/typescript.tgz
     heroku buildpacks:add https://github.com/timanovsky/subdir-heroku-buildpack
 
