@@ -19,7 +19,7 @@ async function initServer() {
   const MONGODB_URI = process.env.MONGODB_URI
                       || 'mongodb://127.0.0.1:27017/'
                          + constants._mongoDatabaseName;
-  console.log('Mongoose successfully connected to MongoDB.');
+  mongoose.connect(MONGODB_URI);
 
   const PORT = process.env.PORT || constants._portNum;
   app.listen(PORT, function() {
